@@ -1,6 +1,9 @@
 # Vaycon Specific Files
 Application/static/
 Application/.env
+00doNotNeed/
+static/
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
