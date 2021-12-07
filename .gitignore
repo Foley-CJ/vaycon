@@ -3,6 +3,7 @@ Application/static/
 Application/.env
 00doNotNeed/
 static/
+staticCollect/
 .env
 
 # Byte-compiled / optimized / DLL files
