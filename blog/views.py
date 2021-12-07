@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def tester(request):
-	return HttpResponse('hi')
+	return HttpResponse('hi my panda pup!')
