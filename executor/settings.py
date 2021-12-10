@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # whitenoise.runserver_nostatic
 
 
 ]
@@ -66,8 +67,9 @@ ROOT_URLCONF = 'executor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS':[os.path.join(BASE_DIR, "templates/blog"),
+                os.path.join(BASE_DIR, "templates")],
+        'APP_DIRS':[],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -130,7 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticCollect')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticCollect') 
+STATIC_ROOT = (str(BASE_DIR.joinpath('staticCollect'))) 
+STATICFILES_DIRS = (str(BASE_DIR.joinpath('staticGlobal')),) # new
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
