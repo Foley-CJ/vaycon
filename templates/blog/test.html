@@ -9,20 +9,33 @@ Variable Set: {{ variable_name }}
 
 {% load static %}
 
-
-<div width='100%' height='100%' style="padding:0px; background-color:000000">
-
-
-</div>
-	<img src="{% static 'Marketing/Vaycon_Banner_V2.jpg' %}" alt="My image" class="center">
+<body>
+<!-- <div width='100%' height='100%' style="padding:0px; background-color:000000">
+</div> -->
+	<img src="{% static 'Marketing/Vaycon_Banner_V2.jpg' %}" alt="My image" class="content" id="content">
+</body>
 
 <style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:auto;
-  margin-bottom:auto;
-  width: 80%;
+.content {
+  position: absolute;
+ left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
+
+/*html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table
+}
+#content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}*/
+
 </style>
