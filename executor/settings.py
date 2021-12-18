@@ -67,7 +67,9 @@ ROOT_URLCONF = 'executor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[os.path.join(BASE_DIR, "templates/blog"),
+        'DIRS':[os.path.join(BASE_DIR, "templates/aws/charts"),
+                os.path.join(BASE_DIR, "templates/aws"),
+                os.path.join(BASE_DIR, "templates/blog"),
                 os.path.join(BASE_DIR, "templates")],
         'APP_DIRS':[],
         'OPTIONS': {

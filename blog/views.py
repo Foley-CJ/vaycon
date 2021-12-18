@@ -11,3 +11,13 @@ def tester(request):
 	context['variable_name'] = 100
 	#return HttpResponse('hi my panda pup!')
 	return HttpResponse(html_template.render(context,request))
+
+
+
+
+def aws(request):
+	html_template= loader.get_template("aws/index.html")
+	context = {}
+	context['variable_name'] = 100
+	#return HttpResponse('hi my panda pup!')
+	return HttpResponse(html_template.render(context,request))

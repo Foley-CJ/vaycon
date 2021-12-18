@@ -5,13 +5,16 @@ from blog import views
 urlpatterns = [
 
     # The home page
-    path('', views.tester, name='home'),
+    path('home', views.tester, name='home'),
 
  	# Upload Location
     #path('upload/csv', views.upload_csv, name='upload_csv'),
 
     # Matches any html file
     #re_path(r'^.*\.*', views.pages, name='pages'),
+
+    # AWS
+    path('', views.aws, name='aws'),
 
 
 
