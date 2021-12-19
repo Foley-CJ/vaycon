@@ -51,8 +51,8 @@
 <div class="container p-3 my-5 rounded bg-white text-dark">
   <h1 id="Intro"> NoSQL Databases Analysis: Twitter Utilization</h1>
   </br>
-  <p>NoSQL databases have been gaining popularity ever since they first appeared in 1998.  Since that point, multiple offerings have entered the space each with a slightly different value proposition. Given the uniqueness of each offering, it can be difficult to detemine which product to deploy.  One dimension of that comparision is the level of support and community surrounding the offering.</p>
-  <p>  In this analysis we investigate that specific dimension by evaluating how each of three of the most popular NoSQL databases utilize Twitter. More specifically, we evalaute MongoDB, DynamoDB, and Cassandra by pulling data from the Twitter API and investigating it with python's plotly package.  </p>
+  <p>NoSQL databases have been gaining popularity ever since they first appeared in 1998.  Since then, multiple offerings have entered the space, each with a slightly different value proposition. Given the uniqueness of each system, it can be challenging to determine which product to deploy.  One dimension of that comparison  is the level of support and community.</p>
+  <p>  In this analysis, we investigate the breadth of the community by evaluating how three of the most popular NoSQL databases utilize Twitter. More specifically, we evaluate MongoDB, DynamoDB, and Cassandra by pulling data with the Twitter API and investigating it with python's Plotly package.  </p>
 </div>
 
 <!-- First Context Block -->
@@ -60,7 +60,7 @@
   </br>
   <h2 id="Summary"> High Level Product Summary </h2>
   </br>
-  <p> To start this analysis we begin by reviewing a few key facts about the three products. These key facts include when the database was first made available, when it joined Twitter, the number of followers, total tweets sent, and tweets sent within 2021.</p>
+  <p> To start this analysis, we begin by reviewing a few key facts about the three products. These key facts include the database's release date, when it joined Twitter, the number of followers, total tweets sent, and tweets sent within 2021.</p>
 
   <table class="table table-hover table-sm">
     <thead>
@@ -102,7 +102,7 @@
     </tbody>
   </table>
   </br>
-  <p> These figures reveal that tenure nor the quantity of tweets alone can predict the number of followers: the key performance indicator that we're interested in exploring. However this data does reveal that both DynamoDB and Cassandra have taken, they do suggest that Cassandra is more active on twitter than it has been historically.   In order to reveal any insights deeper analysis is required. 
+  <p> These figures reveal that neither release date nor tweet quantity alone can predict the number of followers, the key performance indicator that we're interested in exploring. Additionally, this data suggests that while DynamoDB and Cassandra have been less engaged than MongoDB, they are taking a more active role in 2021.  
   </p>
   </br>
 </div>
@@ -113,26 +113,25 @@
   </br>
   <h2 id="Tweets"> Tweets Sent: 2021 Analysis </h2>
   </br>
-  <p> While the total number of tweets posted in 2021 per database is helpful. Breaking that figure down over the year will give a much richer view into how the databases are utilizing twitter.  We start this breakdown by looking at all the tweets.These postings include public tweets, retweets, and directed tweets.  
+  <p> While the total number of tweets posted in 2021 per database is helpful breaking that figure down over the year will give a much richer view of how the databases are utilizing Twitter.  We start this breakdown by looking at all the tweets. These postings include public tweets, retweets, and directed tweets.  
   </p>
 
   {% include "charts/chart_dailyTweets_any.html" %}
 
   <p> This graph alone showcases some interesting behavior already such as the following:</p>
   <ui>
-    <li> The most tweets sent on a single day occured July 13th and November 9th. These two dates align with MongoDBs live and local event respectively.</li>
-    <li> DynamoDB had the most consistent presence prior to September and would send at least one tweet each day including weekends.
-    </li>
+    <li> The most tweets sent on a single day occurred July 13th and November 9th. These two dates align with MongoDB.live and MongoDB.local, respectively.</li>
+    <li> DynamoDB had the most consistent presence before September and would send at least one tweet each day, including weekends.</li>
   </ui>
 </br>
-  <p> When we breakdown the types of tweets specifically to original tweets, direct messages and public tweets, rather than retweets, a very different experience is revealed.</p>
+  <p> When we break down the types of tweets specifically to original tweets, direct and public tweets, rather than retweets, a very different experience is revealed.</p>
 
 
   {% include "charts/chart_dailyTweets_dms.html" %}
 
   {% include "charts/chart_dailyTweets_public.html" %}
 </br>
-  <p> These two graphs showcase that MongoDB is the only database that has been actively reaching out to specific customers.  Additionally it's revealed that DynamoDB had been the most active in posting public tweets, but that has since changed as of September.
+  <p> These two graphs showcase that MongoDB is the only database that has been actively reaching out to specific customers.  Additionally, DynamoDB had been the most active in posting public tweets, but that has since changed as of September.
   </br>
 </div>
 
@@ -143,8 +142,9 @@
   </br>
   <h2 id="Favorites"> Favorites Recieved: 2021 Analysis </h2>
   </br>
-  <p> While posting tweets is required to get your message out to your followers it doesn't gurantee that it will be positively recieved.<p>
-  <p> In this portion of the analysis we review how twitters users feel back the postings the three databases have made in 2021 by examining the number of favorites the posts have recieved. </p>
+  <p> While posting tweets is required to get your message out to your followers, it doesn't guarantee that they will be positively received.
+  </p>
+  <p> In this portion of the analysis, we review how twitters users feel back the postings the three databases have made in 2021 by examining the number of favorites the posts have received. </p>
 
 
   {% include "charts/chart_dailyFavorites_public.html" %}
