@@ -51,11 +51,8 @@
 <div class="container p-3 my-5 rounded bg-white text-dark">
   <h1 id="Intro"> NoSQL Databases Analysis: Twitter Utilization</h1>
   </br>
-  <p>NoSQL databases have been gaining popularity ever since they first appeared in 1998.  Since that point, multiple offerings have entered the space each with a slightly different value proposition. Given the uniqueness of each offering, it can be difficult to detemine which product to deploy.  One dimension of that comparision that's more simple to evaluate is the level of support and community surrounding the offering.</br>
-  </br>
-  In this analysis we investigate that specific dimension by evaluating how each
-
-the utlization of Twitter by three of those offerings: MongoDb, DynamoDb, and Casandra. in 2021 by Twitter API , Tweepy, Plotly, and Sentiment Analysis? </p>
+  <p>NoSQL databases have been gaining popularity ever since they first appeared in 1998.  Since that point, multiple offerings have entered the space each with a slightly different value proposition. Given the uniqueness of each offering, it can be difficult to detemine which product to deploy.  One dimension of that comparision is the level of support and community surrounding the offering.</p>
+  <p>  In this analysis we investigate that specific dimension by evaluating how each of three of the most popular NoSQL databases utilize Twitter. More specifically, we evalaute MongoDB, DynamoDB, and Cassandra by pulling data from the Twitter API and investigating it with python's plotly package.  </p>
 </div>
 
 <!-- First Context Block -->
@@ -116,18 +113,26 @@ the utlization of Twitter by three of those offerings: MongoDb, DynamoDb, and Ca
   </br>
   <h2 id="Tweets"> Tweets Sent: 2021 Analysis </h2>
   </br>
-  <p> From our previous table we can To start the analysis we begin with an assement of a few key facts surrounding the three DBs. examining the total number of tweets posted by the three handles since the start of this year.  These postings include public tweets, retweets, and directed tweets.  
+  <p> While the total number of tweets posted in 2021 per database is helpful. Breaking that figure down over the year will give a much richer view into how the databases are utilizing twitter.  We start this breakdown by looking at all the tweets.These postings include public tweets, retweets, and directed tweets.  
   </p>
 
   {% include "charts/chart_dailyTweets_any.html" %}
 
-  <p>In aggregate MongoDB sent __, DynamoDb sent, and Cassandra sent ____.   </p>
+  <p> This graph alone showcases some interesting behavior already such as the following:</p>
+  <ui>
+    <li> The most tweets sent on a single day occured July 13th and November 9th. These two dates align with MongoDBs live and local event respectively.</li>
+    <li> DynamoDB had the most consistent presence prior to September and would send at least one tweet each day including weekends.
+    </li>
+  </ui>
+</br>
+  <p> When we breakdown the types of tweets specifically to original tweets, direct messages and public tweets, rather than retweets, a very different experience is revealed.</p>
+
 
   {% include "charts/chart_dailyTweets_dms.html" %}
 
-  <p> notes and notes </p>
-
   {% include "charts/chart_dailyTweets_public.html" %}
+</br>
+  <p> These two graphs showcase that MongoDB is the only database that has been actively reaching out to specific customers.  Additionally it's revealed that DynamoDB had been the most active in posting public tweets, but that has since changed as of September.
   </br>
 </div>
 
@@ -138,14 +143,13 @@ the utlization of Twitter by three of those offerings: MongoDb, DynamoDb, and Ca
   </br>
   <h2 id="Favorites"> Favorites Recieved: 2021 Analysis </h2>
   </br>
-  <p> From our previous table we can 
-
-  To start the analysis we begin with an assement of a few key facts surrounding the three DBs. examining the total number of tweets posted by the three handles since the start of this year.  These postings include public tweets, retweets, and directed tweets.  </p>
+  <p> While posting tweets is required to get your message out to your followers it doesn't gurantee that it will be positively recieved.<p>
+  <p> In this portion of the analysis we review how twitters users feel back the postings the three databases have made in 2021 by examining the number of favorites the posts have recieved. </p>
 
 
   {% include "charts/chart_dailyFavorites_public.html" %}
 
-  <p>Top Favorites   </p>
+  <p>The Table below represents the five most favorited tweets of 2021</p>
 
  <table class="table table-hover table-sm">
   <thead>
@@ -191,7 +195,10 @@ the utlization of Twitter by three of those offerings: MongoDb, DynamoDb, and Ca
 
   </tbody>
 </table>
-
+</br>
+<p> While there is an inherent relationship between the number of followers a database has and the number of favorites its tweets recieve it does not guarantee a stronge engagement on each tweet.</p>
+</br>
+<p> An additional interesting observation is that four out of the five most favorited tweets are questions posed to the community.</p>
 
 
 </div>
@@ -207,6 +214,26 @@ the utlization of Twitter by three of those offerings: MongoDb, DynamoDb, and Ca
   </br>
   <h2 id="Results"> Results: 2021 Analysis </h2>
 </br>
+  <p> There are several key takeways as well as additional opporutnities for furthe ranalysis surroindign this investigation. The three major takeways freom the analysis include:
+  <ul>
+      <li>MongoDB is effective at drawing engagement in the form of likes as well as growing its follower base by utilizing question based tweets.</li>
+       <li>Utilizing live events such as MongoDB.live or MondoDB.local in conjuction with twitter works well to build a platform and extend the reach of that platform. AWS could utilizing something similiar during it's AWS re:Invent conference</li>
+       <li>Since September of this year DynamoDBs tweets have significantly dropped off allowing other communities to grow further.
+       </li>
+  </ul>
+
+  <p> Some additional opporutnites and outstanding questions that should still be addressed as as follows:
+  </p>
+  <ul>
+    <li> Does feature/product enahancement announcements draw a large engagement from twitter followers?</li>
+    <li> Does the sentiment or style of communciations have a significant impact on the effectiveness of twitter</li>
+    <li> Are there altenrative social media pplications that could provide a more valuabe return on the amount of time invested?</li>
+    <li>Does the twitter community represent an important part of the actual database community?</li>
+  </ul>
+
+  <p>
+  Ultimately - XYZ
+
 </div>
 
 
